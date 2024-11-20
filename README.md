@@ -1,66 +1,51 @@
-# Disciplina: Programação Web  
-**Professor: Fábio Rodrigues de la Rocha**
+# Programação Web  
+**Professor:** Fábio Rodrigues de la Rocha  
 
+## 📚 Ementa  
+Este repositório contém materiais, exercícios e exemplos práticos relacionados à disciplina de **Programação Web**, abordando conceitos fundamentais e tecnologias modernas para o desenvolvimento de aplicações web, tanto no lado cliente quanto no servidor.  
 
-## 🛠️ Tecnologias e Ferramentas Atualizadas  
+### Conteúdo abordado:  
+1. **Introdução ao Desenvolvimento Web**  
+   - Sites estáticos e dinâmicos.  
+   - Arquitetura de servidores web: Apache, Nginx e Lighttpd.  
+   - Funcionamento, instalação e configuração de servidores no Linux.  
+   - HTML, CSS, JavaScript e requisições AJAX (GET e POST).  
 
-### **Frontend:**  
-- HTML5, CSS, JavaScript  
-- Frameworks modernos: Bootstrap, Framework7  
-- Armazenamento de dados no cliente  
+2. **Programação Backend com Node.js**  
+   - Conceitos básicos: vantagens, desvantagens, instalação e uso do Node.js.  
+   - Programação síncrona e assíncrona (event loop, callbacks e eventos).  
+   - Utilização de pacotes via NPM, incluindo Express.js.  
+   - Criação de servidores para atender requisições e uso de websockets.  
+   - Banco de dados MongoDB e operações mais comuns.  
+   - Gerenciamento de aplicações com PM2 e escalabilidade.  
 
-### **Backend:**  
-- Node.js  
-- NPM (Node Package Manager) e pacotes como Express.js  
-- Representação de dados em JSON  
-- Websockets  
-- Banco de Dados MongoDB  
+3. **Desenvolvimento Frontend**  
+   - Interfaces dinâmicas com HTML5, CSS e JavaScript.  
+   - Uso de frameworks modernos como Bootstrap e Framework7.  
+   - Armazenamento de dados no cliente.  
 
-### **Protocolos e Representação de Dados:**  
-- AJAX (requisições GET e POST)  
+4. **Programação Mobile**  
+   - Visão geral: PWA (Progressive Web Apps) e aplicações híbridas.  
+   - Práticas de desenvolvimento e distribuição de conteúdo.  
 
-### **Servidores:**  
-- Apache, Nginx, Lighttpd  
-- Gerenciamento de aplicações com PM2  
-- Instalação e configuração de servidores no Linux  
+## 🎯 Objetivos da Disciplina  
 
-### **Desenvolvimento Mobile:**  
-- Aplicações PWA (Progressive Web Apps)  
-- Aplicações híbridas  
+- **Objetivo Geral:** Capacitar os estudantes a compreender os fundamentos e as tecnologias envolvidas no desenvolvimento de aplicações web modernas.  
+- **Objetivos Específicos:**  
+  - Dominar o modelo cliente/servidor e linguagens de programação web.  
+  - Desenvolver aplicações web completas, integrando frontend, backend e mobile.  
+  - Instalar, configurar e gerenciar servidores web de forma prática.  
 
+## 📂 Estrutura do Repositório  
+- **/Introdução**: Este repositório contém apenas os trabalhos realizados na disciplina.
 
-## 📂 Estrutura das Aulas e Atividades Práticas  
-
-1. **Introdução ao Desenvolvimento Web:**  
-   - Conceito de sites estáticos e dinâmicos.  
-   - Instalação e configuração de servidores (Apache, Nginx, Lighttpd) no Linux.  
-
-2. **Programação Backend com Node.js:**  
-   - Programação síncrona e assíncrona (event loop, callbacks, orientação a objetos).  
-   - Criação de servidores para requisições e websockets.  
-   - Operações com banco de dados MongoDB.  
-
-3. **Desenvolvimento Frontend:**  
-   - Interfaces dinâmicas com HTML5, CSS, e JavaScript.  
-   - Uso de frameworks modernos, como Bootstrap e Framework7.  
-
-4. **Programação Mobile:**  
-   - Desenvolvimento de aplicações híbridas e PWA.  
-   - Ferramentas e formas de distribuição de conteúdo.  
-
-5. **Projeto Final:**  
-   - Integração do frontend, backend, e mobile em um sistema completo hospedado em servidor remoto.  
-
-
-## 🌟 Exemplo Prático Atualizado  
-
-**Projeto: Sistema de Gerenciamento de Pedidos Online**  
-- **Descrição:** Criação de uma aplicação web para realizar pedidos em um restaurante, com funcionalidades para clientes e administradores.  
-- **Frontend:** Interface criada com HTML5, CSS, JavaScript e Bootstrap para facilitar a navegação.  
-- **Backend:** Servidor implementado com Node.js usando Express.js e representando dados em JSON.  
-- **Banco de Dados:** MongoDB para armazenar informações de pedidos e usuários.  
-- **Mobile:** Criação de uma versão PWA para dispositivos móveis, permitindo acesso offline.  
-- **Servidores:** Hospedagem em Nginx com gerenciamento via PM2.  
+## 🛠️ Ferramentas Recomendadas  
+- **IDE:** Visual Studio Code.  
+- **Servidor:** Nginx ou Apache.  
+- **Node.js:** Framework para backend e gerenciamento de pacotes com NPM.  
+- **Banco de Dados:** MongoDB.  
+- **Frontend:** Frameworks como Bootstrap ou Framework7.  
+- **Gerenciamento:** PM2 para controle de aplicações em servidores.  
 
 ## 📫 Contato  
 Dúvidas? Entre em comigo por e-mail:  
