@@ -13,8 +13,7 @@ Este projeto implementa um sistema de controle automatizado para abertura de por
 5. [Estrutura do Repositório](#estrutura-do-repositório)
 6. [API - Endpoints](#api---endpoints)
 7. [Como Executar](#como-executar)
-8. [Simulação de Fechaduras](#simulação-de-fechaduras)
-9. [Conclusão](#conclusão)
+8. [Conclusão](#conclusão)
 
 ---
 
