@@ -1,54 +1,151 @@
-# Programação Web  
-**Professor:** Fábio Rodrigues de la Rocha  
+# Projeto de Controle de Portas na Universidade
 
-## 📚 Ementa  
-Este repositório contém materiais, exercícios e exemplos práticos relacionados à disciplina de **Programação Web**, abordando conceitos fundamentais e tecnologias modernas para o desenvolvimento de aplicações web, tanto no lado cliente quanto no servidor.  
+## 📖 Introdução
 
-### Conteúdo abordado:  
-1. **Introdução ao Desenvolvimento Web**  
-   - Sites estáticos e dinâmicos.  
-   - Arquitetura de servidores web: Apache, Nginx e Lighttpd.  
-   - Funcionamento, instalação e configuração de servidores no Linux.  
-   - HTML, CSS, JavaScript e requisições AJAX (GET e POST).  
+Este projeto visa implementar um sistema de controle automatizado para abertura de portas em uma universidade. Com base na infraestrutura de fechaduras eletrônicas conectadas a microcontroladores, o sistema permite que professores e funcionários gerenciem e acessem salas utilizando uma plataforma web. O objetivo é otimizar o tempo gasto pela equipe de TI em configurações manuais, tornando o processo de gerenciamento de acessos mais eficiente e seguro.
 
-2. **Programação Backend com Node.js**  
-   - Conceitos básicos: vantagens, desvantagens, instalação e uso do Node.js.  
-   - Programação síncrona e assíncrona (event loop, callbacks e eventos).  
-   - Utilização de pacotes via NPM, incluindo Express.js.  
-   - Criação de servidores para atender requisições e uso de websockets.  
-   - Banco de dados MongoDB e operações mais comuns.  
-   - Gerenciamento de aplicações com PM2 e escalabilidade.  
+---
 
-3. **Desenvolvimento Frontend**  
-   - Interfaces dinâmicas com HTML5, CSS e JavaScript.  
-   - Uso de frameworks modernos como Bootstrap e Framework7.  
-   - Armazenamento de dados no cliente.  
+## 👥 Integrantes do Projeto
 
-4. **Programação Mobile**  
-   - Visão geral: PWA (Progressive Web Apps) e aplicações híbridas.  
-   - Práticas de desenvolvimento e distribuição de conteúdo.  
+- **Alisson Pereira Ferreira**
+- **Dennis Paul Paz Lopez**
 
-## 🎯 Objetivos da Disciplina  
+**Universidade Federal de Santa Catarina (UFSC) – Campus Araranguá**  
+Caixa Postal 88.905-120 – Araranguá – SC – Brasil
 
-- **Objetivo Geral:** Capacitar os estudantes a compreender os fundamentos e as tecnologias envolvidas no desenvolvimento de aplicações web modernas.  
-- **Objetivos Específicos:**  
-  - Dominar o modelo cliente/servidor e linguagens de programação web.  
-  - Desenvolver aplicações web completas, integrando frontend, backend e mobile.  
-  - Instalar, configurar e gerenciar servidores web de forma prática.  
+---
 
-## 📂 Estrutura do Repositório  
-- **/Introdução**: Este repositório contém apenas os trabalhos realizados na disciplina.
+### Principais Características
 
-## 🛠️ Ferramentas Recomendadas  
-- **IDE:** Visual Studio Code.  
-- **Servidor:** Nginx ou Apache.  
-- **Node.js:** Framework para backend e gerenciamento de pacotes com NPM.  
-- **Banco de Dados:** MongoDB.  
-- **Frontend:** Frameworks como Bootstrap ou Framework7.  
-- **Gerenciamento:** PM2 para controle de aplicações em servidores.  
+1. **Autenticação de Usuários**: Professores e funcionários fazem login utilizando suas credenciais da UFSC.
+2. **Controle de Acesso**: O sistema exibe uma lista de salas que o usuário tem permissão para acessar.
+3. **Abertura de Portas**: Ao clicar no botão correspondente à sala, uma mensagem é enviada ao microcontrolador para abrir a porta.
+4. **Sistema Baseado em Websockets**: Comunicação em tempo real entre o servidor e os microcontroladores das fechaduras.
 
-## 📫 Contato  
-Dúvidas? Entre em comigo por e-mail:  
-- **Alisson Pereira Ferreira:** [email](mailto:alissonpef@gmail.com)
+---
 
-Aproveite o aprendizado! 🚀
+## 🛠️ Tecnologias Utilizadas
+
+### **Frontend**
+- **Framework**: Vue.js para renderização dinâmica de componentes.
+- **Comunicação**: Requisições GET e POST para interação com o backend.
+
+### **Backend**
+- **Servidor**: Node.js com Express para criação de APIs RESTful.
+- **Websockets**: Gerenciamento de conexões entre o servidor e microcontroladores.
+- **Banco de Dados**: MongoDB para armazenamento de credenciais e permissões dos usuários.
+
+### **Microcontroladores**
+- Simulação de fechaduras utilizando scripts que representam o comportamento real dos dispositivos.
+
+---
+
+## 📂 Estrutura do Repositório
+
+```
+/Controle_de_Portas
+├── /frontend          # Código da aplicação web
+├── /backend           # Servidor Node.js
+└── /docs              # Documentação do projeto
+```
+
+---
+
+## ⚙️ Funcionalidades
+
+1. **Login**:
+   - Endpoint: `/login`
+   - Método: POST
+   - Entrada: `idufsc`, `senha`
+   - Saída: Token de autenticação.
+
+2. **Lista de Salas**:
+   - Endpoint: `/lista`
+   - Método: GET
+   - Retorna a lista de salas que o usuário tem permissão para acessar.
+
+3. **Abertura de Porta**:
+   - Endpoint: `/abre`
+   - Método: POST
+   - Entrada: `identificação_da_porta`
+   - Aciona o microcontrolador para abrir a porta correspondente.
+
+---
+
+## 🚀 Como Executar
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/alissonpef/Projetos_de_Web-UFSC.git
+```
+
+### 2. Configurar o Banco de Dados
+
+- Certifique-se de ter o MongoDB instalado.
+- Crie uma base de dados chamada `controle_portas`.
+- Popule os dados utilizando o script em `/backend/db/init.js`.
+
+### 3. Executar o Backend
+
+1. Navegue até a pasta `/backend`.
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor:
+
+   ```bash
+   node server.js
+   ```
+
+   O servidor estará acessível em `http://localhost:2000`.
+
+### 4. Executar o Frontend
+
+1. Navegue até a pasta `/frontend`.
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor do frontend:
+
+   ```bash
+   npm run serve
+   ```
+
+   A aplicação web estará acessível em `http://localhost:8080`.
+
+### 5. Testar o Sistema
+
+- Acesse a aplicação pelo navegador.
+- Utilize as credenciais simuladas para login (disponíveis no arquivo `db/init.js`).
+- Teste as funcionalidades de login, lista de salas e abertura de portas.
+
+---
+
+## 🔄 Simulação de Fechaduras
+
+Para simular o funcionamento das fechaduras:
+
+1. Execute o script `fechadura_simulada.js` localizado na pasta `/backend/simulation`:
+
+   ```bash
+   node fechadura_simulada.js
+   ```
+
+2. O script cria uma simulação de comportamento das fechaduras em tempo real.
+
+---
+
+## 🌟 Conclusão
+
+O **Controle de Portas na Universidade** é um sistema robusto que integra tecnologias modernas para otimizar a segurança e o gerenciamento de acesso em ambientes universitários. Este projeto foi desenvolvido com foco em eficiência, escalabilidade e facilidade de uso. Futuras melhorias incluem a implementação de relatórios de uso e integração com sistemas biométricos.
+
+---
+
