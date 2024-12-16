@@ -97,7 +97,7 @@ Caixa Postal 88.905-120 – Araranguá – SC – Brasil
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/alissonpef/Projetos_de_Web-UFSC.git
+git clone https://github.com/alissonpef/Projeto_FullStack_Controle_de_Acesso_a_Portas
 ```
 
 ### 2. Configurar o Banco de Dados
